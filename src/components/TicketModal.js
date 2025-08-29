@@ -99,11 +99,7 @@ const TicketModal = ({
             </div>
             <div className="qr-container">
               <div className="qr-wrapper">
-                <img 
-                  src="/img/IMG_0366.JPG" 
-                  alt="Código QR para pago" 
-                  className="qr-code"
-                />
+                <img src="/img/IMG_0366.jpg" alt="Código QR de Pago" className="qr-code" />
               </div>
               <div className="phone-container">
                 <div className="phone-number">{phoneNumber}</div>
