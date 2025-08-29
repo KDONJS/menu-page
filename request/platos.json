@@ -1,0 +1,85 @@
+{
+    "success": true,
+    "message": "Platos obtenidos exitosamente",
+    "data": [
+        {
+            "id": "ee1eda4d-baa2-4d3f-87ff-c687135c2cf0",
+            "name": "Arroz con pato",
+            "description": "solo plato bello",
+            "price": 20,
+            "type": "PLATO_PRINCIPAL",
+            "status": "ACTIVO",
+            "imageUrl": "https://comedera.com/wp-content/uploads/sites/9/2022/05/Arroz-con-pato-peruano-shutterstock_1846729603.jpg?fit=720,480&crop=0px,38px,720px,404px",
+            "preparationTime": 30,
+            "calories": 450,
+            "availableFrom": null,
+            "availableUntil": null,
+            "createdAt": "2025-08-29T01:17:08.920Z",
+            "updatedAt": "2025-08-29T01:17:08.920Z",
+            "ingredients": [
+                {
+                    "id": "a533d847-6711-4b01-a55f-69ea2703d500",
+                    "name": "arroz",
+                    "quantity": "200",
+                    "allergens": [],
+                    "dishId": "ee1eda4d-baa2-4d3f-87ff-c687135c2cf0",
+                    "createdAt": "2025-08-29T01:17:08.920Z"
+                },
+                {
+                    "id": "cc2d2ced-5e0a-4a91-996d-dbe54a30ceab",
+                    "name": "culantro",
+                    "quantity": "100",
+                    "allergens": [],
+                    "dishId": "ee1eda4d-baa2-4d3f-87ff-c687135c2cf0",
+                    "createdAt": "2025-08-29T01:17:08.920Z"
+                }
+            ]
+        },
+        {
+            "id": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+            "name": "Ensalada Tailandesa",
+            "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+            "price": 12.5,
+            "type": "ENTRADA",
+            "status": "ACTIVO",
+            "imageUrl": "https://imag.bonviveur.com/ensalada-thai.webp",
+            "preparationTime": 10,
+            "calories": 280,
+            "availableFrom": null,
+            "availableUntil": null,
+            "createdAt": "2025-08-27T02:30:39.824Z",
+            "updatedAt": "2025-08-29T01:36:58.676Z",
+            "ingredients": [
+                {
+                    "id": "9718a50d-e56d-407d-ab41-8ef362d2b10d",
+                    "name": "Lechuga romana",
+                    "quantity": "200g",
+                    "allergens": [],
+                    "dishId": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+                    "createdAt": "2025-08-29T01:36:58.676Z"
+                },
+                {
+                    "id": "72ba0e79-dc17-488a-9b98-30a0fa7f901c",
+                    "name": "Crutones",
+                    "quantity": "50g",
+                    "allergens": [
+                        "gluten"
+                    ],
+                    "dishId": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+                    "createdAt": "2025-08-29T01:36:58.676Z"
+                },
+                {
+                    "id": "42a5eba5-89c5-43e4-8a6b-388aa2ffbf35",
+                    "name": "Queso parmesano",
+                    "quantity": "30g",
+                    "allergens": [
+                        "lácteos"
+                    ],
+                    "dishId": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+                    "createdAt": "2025-08-29T01:36:58.676Z"
+                }
+            ]
+        }
+    ],
+    "count": 2
+}

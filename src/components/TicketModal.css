@@ -1,0 +1,368 @@
+.ticket-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  padding: 1rem;
+}
+
+.ticket-modal {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  border-radius: 16px 16px 8px 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  animation: ticketSlideIn 0.4s ease-out;
+}
+
+@keyframes ticketSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.ticket-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.ticket-close:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.ticket-header {
+  text-align: center;
+  padding: 2rem 1.5rem 1.5rem;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  position: relative;
+}
+
+.success-icon {
+  margin-bottom: 1rem;
+}
+
+.ticket-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.ticket-number {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.ticket-perforation {
+  height: 20px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.ticket-perforation::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  right: -10px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    #ddd 0px,
+    #ddd 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  transform: translateY(-50%);
+}
+
+.ticket-content {
+  padding: 1.5rem;
+}
+
+.ticket-section {
+  margin-bottom: 1rem;
+}
+
+.ticket-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.ticket-row svg {
+  color: #718096;
+  flex-shrink: 0;
+}
+
+.label {
+  color: #4a5568;
+  flex: 1;
+}
+
+.value {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.ticket-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 1rem 0;
+}
+
+.ticket-total {
+  background: #f7fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+  letter-spacing: 0.5px;
+}
+
+.total-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #48bb78;
+}
+
+.ticket-footer {
+  text-align: center;
+}
+
+.thank-you {
+  color: #4a5568;
+  font-style: italic;
+  margin: 0;
+}
+
+.ticket-ok-button {
+  width: 100%;
+  background: #48bb78;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ticket-ok-button:hover {
+  background: #38a169;
+}
+
+/* Sección de pago mejorada */
+.payment-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.payment-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.payment-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.qr-wrapper {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid #e5e7eb;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.phone-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.phone-number {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1f2937;
+  letter-spacing: 1px;
+  user-select: all;
+}
+
+.copy-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.copy-button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.copy-button.copied {
+  background: #10b981;
+}
+
+.copy-button.copied:hover {
+  background: #059669;
+}
+
+/* Responsive mejorado */
+@media (max-width: 480px) {
+  .ticket-overlay {
+    padding: 0.5rem;
+  }
+  
+  .ticket-modal {
+    width: 100%;
+    max-height: 95vh;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .ticket-header {
+    padding: 1.5rem 1rem 1rem;
+  }
+  
+  .ticket-title {
+    font-size: 1.25rem;
+  }
+  
+  .ticket-content {
+    padding: 1rem;
+  }
+  
+  .qr-code {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .qr-wrapper {
+    padding: 8px;
+  }
+  
+  .phone-container {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+  }
+  
+  .phone-number {
+    font-size: 16px;
+  }
+  
+  .copy-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .qr-code {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .ticket-content {
+    padding: 0.75rem;
+  }
+  
+  .phone-number {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .ticket-modal {
+    max-width: 450px;
+  }
+  
+  .qr-code {
+    width: 180px;
+    height: 180px;
+  }
+}
