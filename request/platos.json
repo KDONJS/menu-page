@@ -3,6 +3,186 @@
     "message": "Platos obtenidos exitosamente",
     "data": [
         {
+            "id": "cbeff500-3f41-45f3-9da2-eaefcdf67a76",
+            "name": "Lomo de Gallina",
+            "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+            "price": 12.5,
+            "type": "PLATO_PRINCIPAL",
+            "status": "ACTIVO",
+            "imageUrl": "https://d1u6ma1fmhichy.cloudfront.net/storage/images/500x293-21-adobo-de-cerdo-1672081976.jpeg",
+            "preparationTime": 10,
+            "calories": 280,
+            "availableFrom": null,
+            "availableUntil": null,
+            "createdAt": "2025-09-01T04:15:19.144Z",
+            "updatedAt": "2025-09-01T04:15:19.144Z",
+            "ingredients": [
+                {
+                    "id": "260ca173-12f1-4092-95cf-61935d79015d",
+                    "name": "Lechuga romana",
+                    "quantity": "200g",
+                    "allergens": [],
+                    "dishId": "cbeff500-3f41-45f3-9da2-eaefcdf67a76",
+                    "createdAt": "2025-09-01T04:15:19.144Z"
+                },
+                {
+                    "id": "3899cc3e-8946-4f31-9204-787093102d3f",
+                    "name": "Crutones",
+                    "quantity": "50g",
+                    "allergens": [
+                        "gluten"
+                    ],
+                    "dishId": "cbeff500-3f41-45f3-9da2-eaefcdf67a76",
+                    "createdAt": "2025-09-01T04:15:19.144Z"
+                },
+                {
+                    "id": "d4d012a2-3e11-48b3-a8e3-47adca0da45a",
+                    "name": "Queso parmesano",
+                    "quantity": "30g",
+                    "allergens": [
+                        "lácteos"
+                    ],
+                    "dishId": "cbeff500-3f41-45f3-9da2-eaefcdf67a76",
+                    "createdAt": "2025-09-01T04:15:19.144Z"
+                }
+            ]
+        },
+        {
+            "id": "b6726244-59f4-4421-828b-cf338f2fafa5",
+            "name": "Aji de Gallina",
+            "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+            "price": 12.5,
+            "type": "PLATO_PRINCIPAL",
+            "status": "ACTIVO",
+            "imageUrl": "https://d1u6ma1fmhichy.cloudfront.net/storage/images/500x293-21-adobo-de-cerdo-1672081976.jpeg",
+            "preparationTime": 10,
+            "calories": 280,
+            "availableFrom": null,
+            "availableUntil": null,
+            "createdAt": "2025-08-29T05:16:13.470Z",
+            "updatedAt": "2025-08-29T05:16:13.470Z",
+            "ingredients": [
+                {
+                    "id": "a1503171-7e32-4011-a248-7195052ae857",
+                    "name": "Lechuga romana",
+                    "quantity": "200g",
+                    "allergens": [],
+                    "dishId": "b6726244-59f4-4421-828b-cf338f2fafa5",
+                    "createdAt": "2025-08-29T05:16:13.470Z"
+                },
+                {
+                    "id": "6c86f975-cc91-40ff-819a-8c1ce1a4eeb1",
+                    "name": "Crutones",
+                    "quantity": "50g",
+                    "allergens": [
+                        "gluten"
+                    ],
+                    "dishId": "b6726244-59f4-4421-828b-cf338f2fafa5",
+                    "createdAt": "2025-08-29T05:16:13.470Z"
+                },
+                {
+                    "id": "430cb7b8-7e90-45e5-a058-fab5353e03d5",
+                    "name": "Queso parmesano",
+                    "quantity": "30g",
+                    "allergens": [
+                        "lácteos"
+                    ],
+                    "dishId": "b6726244-59f4-4421-828b-cf338f2fafa5",
+                    "createdAt": "2025-08-29T05:16:13.470Z"
+                }
+            ]
+        },
+        {
+            "id": "6082fcad-b76f-4176-b263-cbca70251480",
+            "name": "Ensalada Cesar",
+            "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+            "price": 12.5,
+            "type": "ENTRADA",
+            "status": "ACTIVO",
+            "imageUrl": "https://d1u6ma1fmhichy.cloudfront.net/storage/images/500x293-21-adobo-de-cerdo-1672081976.jpeg",
+            "preparationTime": 10,
+            "calories": 280,
+            "availableFrom": null,
+            "availableUntil": null,
+            "createdAt": "2025-08-29T05:16:00.133Z",
+            "updatedAt": "2025-08-29T05:16:00.133Z",
+            "ingredients": [
+                {
+                    "id": "0f88dd0d-729e-462c-b8e5-4557412bd3a9",
+                    "name": "Lechuga romana",
+                    "quantity": "200g",
+                    "allergens": [],
+                    "dishId": "6082fcad-b76f-4176-b263-cbca70251480",
+                    "createdAt": "2025-08-29T05:16:00.133Z"
+                },
+                {
+                    "id": "12520f77-1c5e-4aaf-9384-5a365eff0906",
+                    "name": "Crutones",
+                    "quantity": "50g",
+                    "allergens": [
+                        "gluten"
+                    ],
+                    "dishId": "6082fcad-b76f-4176-b263-cbca70251480",
+                    "createdAt": "2025-08-29T05:16:00.133Z"
+                },
+                {
+                    "id": "2714c9e4-2d3c-4611-984b-14045f23ee86",
+                    "name": "Queso parmesano",
+                    "quantity": "30g",
+                    "allergens": [
+                        "lácteos"
+                    ],
+                    "dishId": "6082fcad-b76f-4176-b263-cbca70251480",
+                    "createdAt": "2025-08-29T05:16:00.133Z"
+                }
+            ]
+        },
+        {
+            "id": "d9c1da26-3fa2-4d04-89d8-2d79a3765e49",
+            "name": "Ensalada Romana",
+            "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+            "price": 12.5,
+            "type": "ENTRADA",
+            "status": "ACTIVO",
+            "imageUrl": "https://d1u6ma1fmhichy.cloudfront.net/storage/images/500x293-287-ensalada-provenzal.jpeg",
+            "preparationTime": 10,
+            "calories": 280,
+            "availableFrom": null,
+            "availableUntil": null,
+            "createdAt": "2025-08-29T05:13:50.381Z",
+            "updatedAt": "2025-08-29T05:20:06.885Z",
+            "ingredients": [
+                {
+                    "id": "b5041dd4-4fcb-4a7c-acf0-99bbf1fe0b18",
+                    "name": "Lechuga romana",
+                    "quantity": "200g",
+                    "allergens": [],
+                    "dishId": "d9c1da26-3fa2-4d04-89d8-2d79a3765e49",
+                    "createdAt": "2025-08-29T05:20:06.885Z"
+                },
+                {
+                    "id": "703b132d-afff-485f-a366-23c78422e852",
+                    "name": "Crutones",
+                    "quantity": "50g",
+                    "allergens": [
+                        "gluten"
+                    ],
+                    "dishId": "d9c1da26-3fa2-4d04-89d8-2d79a3765e49",
+                    "createdAt": "2025-08-29T05:20:06.885Z"
+                },
+                {
+                    "id": "03514bc4-962e-43d8-ba28-996726bac83c",
+                    "name": "Queso parmesano",
+                    "quantity": "30g",
+                    "allergens": [
+                        "lácteos"
+                    ],
+                    "dishId": "d9c1da26-3fa2-4d04-89d8-2d79a3765e49",
+                    "createdAt": "2025-08-29T05:20:06.885Z"
+                }
+            ]
+        },
+        {
             "id": "ee1eda4d-baa2-4d3f-87ff-c687135c2cf0",
             "name": "Arroz con pato",
             "description": "solo plato bello",
@@ -81,5 +261,5 @@
             ]
         }
     ],
-    "count": 2
+    "count": 6
 }

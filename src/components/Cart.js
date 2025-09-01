@@ -36,18 +36,41 @@ const Cart = ({
     const totalEntradas = entradas.reduce((sum, item) => sum + item.quantity, 0);
     const totalPlatosPrincipales = platosPrincipales.reduce((sum, item) => sum + item.quantity, 0);
     
+    const menusCompletos = Math.min(totalEntradas, totalPlatosPrincipales);
+    
+    // Crear menús emparejando entradas con platos principales
+    const menus = [];
+    for (let i = 0; i < menusCompletos; i++) {
+      const entradaIndex = Math.floor(i * entradas.length / menusCompletos);
+      const platoIndex = Math.floor(i * platosPrincipales.length / menusCompletos);
+      
+      const entrada = entradas[entradaIndex];
+      const plato = platosPrincipales[platoIndex];
+      
+      menus.push({
+        id: `menu-${i}`,
+        entrada,
+        plato,
+        precio: entrada.price + plato.price
+      });
+    }
+    
     return {
       entradas,
       platosPrincipales,
       totalEntradas,
       totalPlatosPrincipales,
-      menusCompletos: Math.min(totalEntradas, totalPlatosPrincipales),
+      menusCompletos,
+      menus,
       entradasExtra: Math.max(0, totalEntradas - totalPlatosPrincipales),
       platosExtra: Math.max(0, totalPlatosPrincipales - totalEntradas)
     };
   };
 
   const breakdown = getMenuBreakdown();
+  
+  // Calcular el total de todos los menús
+  const totalMenus = breakdown.menus.reduce((sum, menu) => sum + menu.precio, 0);
 
   return (
     <div className="cart-overlay">
@@ -94,110 +117,137 @@ const Cart = ({
                 </div>
               </div>
 
-              {/* Lista de items */}
-              <div className="cart-items">
-                <h4>Entradas</h4>
-                {breakdown.entradas.length > 0 ? (
-                  breakdown.entradas.map(item => (
-                    <div key={item.id} className="cart-item">
-                      <img 
-                        src={item.imageUrl} 
-                        alt={item.name}
-                        className="cart-item-image"
-                      />
-                      <div className="cart-item-details">
-                        <h5 className="cart-item-name">{item.name}</h5>
-                        <p className="cart-item-price">S/ {item.price.toFixed(2)} c/u</p>
+              {/* Menús completos */}
+              {breakdown.menusCompletos > 0 && (
+                <div className="cart-items">
+                  <h4>Menús Completos</h4>
+                  {breakdown.menus.map((menu, index) => (
+                    <div key={menu.id} className="menu-complete-item">
+                      <div className="menu-header">
+                        <h5 className="menu-title">Menú #{index + 1}</h5>
+                        <div className="menu-price">S/ {menu.precio.toFixed(2)}</div>
                       </div>
-                      
-                      <div className="cart-item-controls">
-                        <div className="quantity-controls">
-                          <button 
-                            className="quantity-btn"
-                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          >
-                            <Minus size={12} />
-                          </button>
-                          <span className="quantity">{item.quantity}</span>
-                          <button 
-                            className="quantity-btn"
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          >
-                            <Plus size={12} />
-                          </button>
+                      <div className="menu-details">
+                        <div className="menu-dish">
+                          <img src={menu.entrada.imageUrl} alt={menu.entrada.name} className="menu-dish-image" />
+                          <div className="menu-dish-info">
+                            <span className="menu-dish-name">Entrada: {menu.entrada.name}</span>
+                            <span className="menu-dish-price">S/ {menu.entrada.price.toFixed(2)}</span>
+                          </div>
                         </div>
-                        
-                        <div className="item-total">
-                          S/ {(item.price * item.quantity).toFixed(2)}
+                        <div className="menu-dish">
+                          <img src={menu.plato.imageUrl} alt={menu.plato.name} className="menu-dish-image" />
+                          <div className="menu-dish-info">
+                            <span className="menu-dish-name">Plato: {menu.plato.name}</span>
+                            <span className="menu-dish-price">S/ {menu.plato.price.toFixed(2)}</span>
+                          </div>
                         </div>
-                        
-                        <button 
-                          className="remove-item"
-                          onClick={() => removeFromCart(item.id)}
-                        >
-                          <Trash2 size={14} />
-                        </button>
                       </div>
                     </div>
-                  ))
-                ) : (
-                  <p className="no-items">No hay entradas seleccionadas</p>
-                )}
+                  ))}
+                </div>
+              )}
 
-                <h4>Platos Principales</h4>
-                {breakdown.platosPrincipales.length > 0 ? (
-                  breakdown.platosPrincipales.map(item => (
-                    <div key={item.id} className="cart-item">
-                      <img 
-                        src={item.imageUrl} 
-                        alt={item.name}
-                        className="cart-item-image"
-                      />
-                      <div className="cart-item-details">
-                        <h5 className="cart-item-name">{item.name}</h5>
-                        <p className="cart-item-price">S/ {item.price.toFixed(2)} c/u</p>
-                      </div>
-                      
-                      <div className="cart-item-controls">
-                        <div className="quantity-controls">
-                          <button 
-                            className="quantity-btn"
-                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          >
-                            <Minus size={12} />
-                          </button>
-                          <span className="quantity">{item.quantity}</span>
-                          <button 
-                            className="quantity-btn"
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          >
-                            <Plus size={12} />
-                          </button>
+              {/* Items individuales (solo si hay extras) */}
+              {(breakdown.entradasExtra > 0 || breakdown.platosExtra > 0) && (
+                <div className="cart-items">
+                  <h4>Items Individuales</h4>
+                  
+                  {breakdown.entradasExtra > 0 && (
+                    <>
+                      <h5 className="item-category">Entradas Extra</h5>
+                      {breakdown.entradas.slice(breakdown.menusCompletos).map(item => (
+                        <div key={item.id} className="cart-item">
+                          <img 
+                            src={item.imageUrl} 
+                            alt={item.name}
+                            className="cart-item-image"
+                          />
+                          <div className="cart-item-details">
+                            <h5 className="cart-item-name">{item.name}</h5>
+                            <p className="cart-item-description">Entrada individual</p>
+                          </div>
+                          
+                          <div className="cart-item-controls">
+                            <div className="quantity-controls">
+                              <button 
+                                className="quantity-btn"
+                                onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                              >
+                                <Minus size={12} />
+                              </button>
+                              <span className="quantity">{item.quantity - breakdown.menusCompletos}</span>
+                              <button 
+                                className="quantity-btn"
+                                onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                              >
+                                <Plus size={12} />
+                              </button>
+                            </div>
+                            
+                            <button 
+                              className="remove-item"
+                              onClick={() => removeFromCart(item.id)}
+                            >
+                              <Trash2 size={14} />
+                            </button>
+                          </div>
                         </div>
-                        
-                        <div className="item-total">
-                          S/ {(item.price * item.quantity).toFixed(2)}
+                      ))}
+                    </>
+                  )}
+
+                  {breakdown.platosExtra > 0 && (
+                    <>
+                      <h5 className="item-category">Platos Principales Extra</h5>
+                      {breakdown.platosPrincipales.slice(breakdown.menusCompletos).map(item => (
+                        <div key={item.id} className="cart-item">
+                          <img 
+                            src={item.imageUrl} 
+                            alt={item.name}
+                            className="cart-item-image"
+                          />
+                          <div className="cart-item-details">
+                            <h5 className="cart-item-name">{item.name}</h5>
+                            <p className="cart-item-description">Plato individual</p>
+                          </div>
+                          
+                          <div className="cart-item-controls">
+                            <div className="quantity-controls">
+                              <button 
+                                className="quantity-btn"
+                                onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                              >
+                                <Minus size={12} />
+                              </button>
+                              <span className="quantity">{item.quantity - breakdown.menusCompletos}</span>
+                              <button 
+                                className="quantity-btn"
+                                onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                              >
+                                <Plus size={12} />
+                              </button>
+                            </div>
+                            
+                            <button 
+                              className="remove-item"
+                              onClick={() => removeFromCart(item.id)}
+                            >
+                              <Trash2 size={14} />
+                            </button>
+                          </div>
                         </div>
-                        
-                        <button 
-                          className="remove-item"
-                          onClick={() => removeFromCart(item.id)}
-                        >
-                          <Trash2 size={14} />
-                        </button>
-                      </div>
-                    </div>
-                  ))
-                ) : (
-                  <p className="no-items">No hay platos principales seleccionados</p>
-                )}
-              </div>
+                      ))}
+                    </>
+                  )}
+                </div>
+              )}
               
               <div className="cart-footer">
                 <div className="cart-total">
                   <div className="total-breakdown">
                     <div className="total-line">
-                      <strong>Total: S/ {totalPrice.toFixed(2)}</strong>
+                      <strong>Total: S/ {totalMenus.toFixed(2)}</strong>
                     </div>
                   </div>
                 </div>
@@ -241,8 +291,8 @@ const Cart = ({
         <TicketModal
           isOpen={showTicket}
           cart={cart}
-          totalPrice={totalPrice}
-          menuCount={menuCount}
+          totalPrice={totalMenus}
+          menuCount={breakdown.menusCompletos}
           onClose={handleCloseTicket}
         />
       )}
