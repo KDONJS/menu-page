@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RotateCcw, CheckCircle, ShoppingCart } from 'lucide-react';
+import { RotateCcw, CheckCircle, ShoppingCart, Utensils } from 'lucide-react';
 import DishCard from './DishCard';
 import './MenuPage.css';
 import TicketModal from './TicketModal';
@@ -47,47 +47,56 @@ const MenuPage = ({
 
   return (
     <div className="menu-page">
-      <header className="menu-header">
+      <header className="menu-header-main">
         <div className="container">
           <div className="header-content">
-            <div className="title-section">
-              <h1 className="menu-title">Menú del Día</h1>
-              <p className="menu-subtitle">Selecciona tus platos favoritos</p>
-              
-              {/* Resumen del carrito */}
-              <div className="cart-summary">
-                <div className="summary-item">
-                  <span className="summary-label">Entradas:</span>
-                  <span className={`summary-value ${totalEntradas > 0 ? 'has-items' : ''}`}>
-                    {totalEntradas} seleccionada(s)
+            {/* Logo/Icono a la izquierda */}
+            <div className="logo-section">
+              <div className="logo-icon">
+                <Utensils size={32} />
+              </div>
+              <div className="logo-text">
+                <h1 className="menu-title">Menú del Día</h1>
+              </div>
+            </div>
+            
+            {/* Resumen del pedido en el centro (compacto) */}
+            <div className="order-summary">
+              <div className="summary-compact">
+                <span className="summary-item-compact">
+                  <span className="summary-label-compact">Entradas:</span>
+                  <span className={`summary-value-compact ${totalEntradas > 0 ? 'has-items' : ''}`}>
+                    {totalEntradas}
                   </span>
-                </div>
-                <div className="summary-item">
-                  <span className="summary-label">Platos Principales:</span>
-                  <span className={`summary-value ${totalPlatosPrincipales > 0 ? 'has-items' : ''}`}>
-                    {totalPlatosPrincipales} seleccionado(s)
+                </span>
+                <span className="summary-item-compact">
+                  <span className="summary-label-compact">Principales:</span>
+                  <span className={`summary-value-compact ${totalPlatosPrincipales > 0 ? 'has-items' : ''}`}>
+                    {totalPlatosPrincipales}
                   </span>
-                </div>
+                </span>
                 {hasCompleteMenus && (
-                  <div className="summary-item menu-count">
-                    <span className="summary-label">Menús completos:</span>
-                    <span className="summary-value complete">{menuCount}</span>
-                  </div>
+                  <span className="summary-item-compact menu-complete">
+                    <span className="summary-label-compact">Menús:</span>
+                    <span className="summary-value-compact complete">{menuCount}</span>
+                  </span>
+                )}
+                {hasCompleteMenus && (
+                  <span className="summary-item-compact total-price-inline">
+                    <span className="summary-label-compact">Total:</span>
+                    <span className="price-amount-inline">S/ {totalPrice.toFixed(2)}</span>
+                  </span>
                 )}
               </div>
             </div>
             
-            {/* Mostrar precio y acciones cuando hay menús completos */}
-            {hasCompleteMenus && (
-              <div className="price-section">
-                <div className="total-price">
-                  <span className="price-label">Total:</span>
-                  <span className="price-amount">S/ {totalPrice.toFixed(2)}</span>
-                </div>
+            {/* Botones de acción a la derecha */}
+            <div className="actions-section">
+              {hasCompleteMenus ? (
                 <div className="action-buttons">
                   <button className="cart-button" onClick={onShowCart}>
                     <ShoppingCart size={16} />
-                    Ver Carrito ({cart.length})
+                    Carrito ({cart.length})
                   </button>
                   <button className="reset-button" onClick={onResetCart}>
                     <RotateCcw size={16} />
@@ -95,24 +104,18 @@ const MenuPage = ({
                   </button>
                   <button className="order-button" onClick={handleOrder}>
                     <CheckCircle size={16} />
-                    Ordenar {menuCount} Menú(s)
+                    Ordenar
                   </button>
                 </div>
-              </div>
-            )}
-            
-            {/* Mostrar botón de limpiar si hay items pero no menús completos */}
-            {cart.length > 0 && !hasCompleteMenus && (
-              <div className="partial-selection">
-                <p className="incomplete-message">
-                  Agrega más platos para completar tus menús
-                </p>
-                <button className="reset-button" onClick={onResetCart}>
-                  <RotateCcw size={16} />
-                  Limpiar Carrito
-                </button>
-              </div>
-            )}
+              ) : cart.length > 0 ? (
+                <div className="action-buttons">
+                  <button className="reset-button" onClick={onResetCart}>
+                    <RotateCcw size={16} />
+                    Limpiar
+                  </button>
+                </div>
+              ) : null}
+            </div>
           </div>
         </div>
       </header>

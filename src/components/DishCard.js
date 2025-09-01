@@ -49,15 +49,6 @@ const DishCard = ({
         <p className="dish-description">{dish.description}</p>
         
         <div className="dish-footer">
-          {/* Precio oculto temporalmente */}
-          {/* <div className="dish-price">
-            <span className="price-amount">S/ {dish.price.toFixed(2)}</span>
-            {quantity > 0 && (
-              <span className="total-price">
-                Total: S/ {(dish.price * quantity).toFixed(2)}
-              </span>
-            )}
-          </div> */}
           
           <div className="dish-controls">
             {quantity === 0 ? (

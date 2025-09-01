@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, CheckCircle, Plus, Minus, Trash2, ShoppingBag, AlertTriangle, FileText, XCircle } from 'lucide-react';
+import { X, CheckCircle, Plus, Minus, Trash2, ShoppingBag, AlertTriangle, FileText, XCircle, Utensils, BarChart3 } from 'lucide-react';
 import './Cart.css';
 import TicketModal from './TicketModal';
 
@@ -88,7 +88,7 @@ const Cart = ({
         <div className="cart-content">
           {cart.length === 0 ? (
             <div className="empty-cart">
-              <div className="empty-icon">🍽️</div>
+              <Utensils size={50} className="empty-icon" />
               <h3>Tu carrito está vacío</h3>
               <p>Agrega algunos platos deliciosos para comenzar</p>
             </div>
@@ -96,7 +96,10 @@ const Cart = ({
             <>
               {/* Resumen de menús */}
               <div className="menu-summary">
-                <h3>Resumen del Pedido</h3>
+                <h3>
+                  <BarChart3 size={20} />
+                  Resumen del Pedido
+                </h3>
                 <div className="summary-stats">
                   <div className="stat-item">
                     <span className="stat-label">Menús completos:</span>
@@ -123,8 +126,11 @@ const Cart = ({
                   <h4>Menús Completos</h4>
                   {breakdown.menus.map((menu, index) => (
                     <div key={menu.id} className="menu-complete-item">
-                      <div className="menu-header">
-                        <h5 className="menu-title">Menú #{index + 1}</h5>
+                      <div className="menu-header-2">
+                        <h5 className="menu-title">
+                          <Utensils size={16} />
+                          Menú #{index + 1}
+                        </h5>
                         <div className="menu-price">S/ {menu.precio.toFixed(2)}</div>
                       </div>
                       <div className="menu-details">
