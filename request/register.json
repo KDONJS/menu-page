@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "SMS deshabilitado. Usa el código: 123456",
+    "data": {
+        "name": "Luis Edin",
+        "phoneNumber": "+51915024829",
+        "expiresAt": "2025-09-01T06:37:44.153Z",
+        "smsEnabled": false,
+        "code": "123456"
+    }
+}

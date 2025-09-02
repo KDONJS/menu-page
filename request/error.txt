@@ -1,0 +1,146 @@
+Cart.js:22 === CART DEBUG - RESPUESTA COMPLETA DE LA API ===
+Cart.js:23 cart prop: (4) [{…}, {…}, {…}, {…}]0: cartItemId: "7ac6acb7-4f88-4861-8f30-7364c7b6a293"id: "d9c1da26-3fa2-4d04-89d8-2d79a3765e49"image: ""name: "Ensalada Romana"price: 12.5quantity: 1type: "ENTRADA"[[Prototype]]: Object1: cartItemId: "1534013c-85eb-4a1a-bec3-cd0f981aaacd"id: "cbeff500-3f41-45f3-9da2-eaefcdf67a76"image: ""name: "Lomo de Gallina"price: 12.5quantity: 1type: "PLATO_PRINCIPAL"[[Prototype]]: Object2: {id: '29b46478-d6b4-42db-8b02-9cd3574f73e7', cartItemId: 'ef96c693-1e93-485a-a738-6f801697c028', name: 'Ensalada Tailandesa', type: 'ENTRADA', price: 12.5, …}3: {id: 'b6726244-59f4-4421-828b-cf338f2fafa5', cartItemId: 'aba1d71e-a0dc-4062-9da5-4dab93521226', name: 'Aji de Gallina', type: 'PLATO_PRINCIPAL', price: 12.5, …}length: 4[[Prototype]]: Array(0)
+Cart.js:24 cartData prop: undefined
+Cart.js:25 cart type: object
+Cart.js:26 cart isArray: true
+Cart.js:27 cartData type: undefined
+Cart.js:42 CART ARRAY - PRIMER ITEM: {
+  "id": "d9c1da26-3fa2-4d04-89d8-2d79a3765e49",
+  "cartItemId": "7ac6acb7-4f88-4861-8f30-7364c7b6a293",
+  "name": "Ensalada Romana",
+  "type": "ENTRADA",
+  "price": 12.5,
+  "quantity": 1,
+  "image": ""
+}
+Cart.js:44 === FIN CART DEBUG ===
+Cart.js:117 [Cart] cartItems finales: (4) [{…}, {…}, {…}, {…}]
+Cart.js:118 [Cart] cartItems length: 4
+Cart.js:265 [Cart] Items agrupados: {menus: Array(0), entradas: Array(0), platosPrincipales: Array(0), postres: Array(0), otros: Array(4)}
+Cart.js:176 === RENDERIZANDO ITEM ===
+Cart.js:177 Item completo: {
+  "id": "d9c1da26-3fa2-4d04-89d8-2d79a3765e49",
+  "cartItemId": "7ac6acb7-4f88-4861-8f30-7364c7b6a293",
+  "name": "Ensalada Romana",
+  "type": "ENTRADA",
+  "price": 12.5,
+  "quantity": 1,
+  "image": ""
+}
+Cart.js:181 Dish extraído: {}
+Cart.js:193 [Cart] Rendering item DETALLES: {itemId: 'd9c1da26-3fa2-4d04-89d8-2d79a3765e49', dishId: undefined, dishName: undefined, imageUrl: '/img/IMG_0366.jpg', originalImageUrl: undefined, …}
+Cart.js:203 === FIN RENDERIZADO ITEM ===
+Cart.js:176 === RENDERIZANDO ITEM ===
+Cart.js:177 Item completo: {
+  "id": "cbeff500-3f41-45f3-9da2-eaefcdf67a76",
+  "cartItemId": "1534013c-85eb-4a1a-bec3-cd0f981aaacd",
+  "name": "Lomo de Gallina",
+  "type": "PLATO_PRINCIPAL",
+  "price": 12.5,
+  "quantity": 1,
+  "image": ""
+}
+Cart.js:181 Dish extraído: {}
+Cart.js:193 [Cart] Rendering item DETALLES: {itemId: 'cbeff500-3f41-45f3-9da2-eaefcdf67a76', dishId: undefined, dishName: undefined, imageUrl: '/img/IMG_0366.jpg', originalImageUrl: undefined, …}
+Cart.js:203 === FIN RENDERIZADO ITEM ===
+Cart.js:176 === RENDERIZANDO ITEM ===
+Cart.js:177 Item completo: {
+  "id": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+  "cartItemId": "ef96c693-1e93-485a-a738-6f801697c028",
+  "name": "Ensalada Tailandesa",
+  "type": "ENTRADA",
+  "price": 12.5,
+  "quantity": 1,
+  "image": ""
+}
+Cart.js:181 Dish extraído: {}
+Cart.js:193 [Cart] Rendering item DETALLES: {itemId: '29b46478-d6b4-42db-8b02-9cd3574f73e7', dishId: undefined, dishName: undefined, imageUrl: '/img/IMG_0366.jpg', originalImageUrl: undefined, …}
+Cart.js:203 === FIN RENDERIZADO ITEM ===
+Cart.js:176 === RENDERIZANDO ITEM ===
+Cart.js:177 Item completo: {
+  "id": "b6726244-59f4-4421-828b-cf338f2fafa5",
+  "cartItemId": "aba1d71e-a0dc-4062-9da5-4dab93521226",
+  "name": "Aji de Gallina",
+  "type": "PLATO_PRINCIPAL",
+  "price": 12.5,
+  "quantity": 1,
+  "image": ""
+}
+Cart.js:181 Dish extraído: {}
+Cart.js:193 [Cart] Rendering item DETALLES: {itemId: 'b6726244-59f4-4421-828b-cf338f2fafa5', dishId: undefined, dishName: undefined, imageUrl: '/img/IMG_0366.jpg', originalImageUrl: undefined, …}
+Cart.js:203 === FIN RENDERIZADO ITEM ===
+Cart.js:22 === CART DEBUG - RESPUESTA COMPLETA DE LA API ===
+Cart.js:23 cart prop: (4) [{…}, {…}, {…}, {…}]
+Cart.js:24 cartData prop: undefined
+Cart.js:25 cart type: object
+Cart.js:26 cart isArray: true
+Cart.js:27 cartData type: undefined
+Cart.js:42 CART ARRAY - PRIMER ITEM: {
+  "id": "d9c1da26-3fa2-4d04-89d8-2d79a3765e49",
+  "cartItemId": "7ac6acb7-4f88-4861-8f30-7364c7b6a293",
+  "name": "Ensalada Romana",
+  "type": "ENTRADA",
+  "price": 12.5,
+  "quantity": 1,
+  "image": ""
+}
+Cart.js:44 === FIN CART DEBUG ===
+Cart.js:117 [Cart] cartItems finales: (4) [{…}, {…}, {…}, {…}]
+Cart.js:118 [Cart] cartItems length: 4
+Cart.js:265 [Cart] Items agrupados: {menus: Array(0), entradas: Array(0), platosPrincipales: Array(0), postres: Array(0), otros: Array(4)}
+Cart.js:176 === RENDERIZANDO ITEM ===
+Cart.js:177 Item completo: {
+  "id": "d9c1da26-3fa2-4d04-89d8-2d79a3765e49",
+  "cartItemId": "7ac6acb7-4f88-4861-8f30-7364c7b6a293",
+  "name": "Ensalada Romana",
+  "type": "ENTRADA",
+  "price": 12.5,
+  "quantity": 1,
+  "image": ""
+}
+Cart.js:181 Dish extraído: {}
+Cart.js:193 [Cart] Rendering item DETALLES: {itemId: 'd9c1da26-3fa2-4d04-89d8-2d79a3765e49', dishId: undefined, dishName: undefined, imageUrl: '/img/IMG_0366.jpg', originalImageUrl: undefined, …}
+Cart.js:203 === FIN RENDERIZADO ITEM ===
+Cart.js:176 === RENDERIZANDO ITEM ===
+Cart.js:177 Item completo: {
+  "id": "cbeff500-3f41-45f3-9da2-eaefcdf67a76",
+  "cartItemId": "1534013c-85eb-4a1a-bec3-cd0f981aaacd",
+  "name": "Lomo de Gallina",
+  "type": "PLATO_PRINCIPAL",
+  "price": 12.5,
+  "quantity": 1,
+  "image": ""
+}
+Cart.js:181 Dish extraído: {}
+Cart.js:193 [Cart] Rendering item DETALLES: {itemId: 'cbeff500-3f41-45f3-9da2-eaefcdf67a76', dishId: undefined, dishName: undefined, imageUrl: '/img/IMG_0366.jpg', originalImageUrl: undefined, …}
+Cart.js:203 === FIN RENDERIZADO ITEM ===
+Cart.js:176 === RENDERIZANDO ITEM ===
+Cart.js:177 Item completo: {
+  "id": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+  "cartItemId": "ef96c693-1e93-485a-a738-6f801697c028",
+  "name": "Ensalada Tailandesa",
+  "type": "ENTRADA",
+  "price": 12.5,
+  "quantity": 1,
+  "image": ""
+}
+Cart.js:181 Dish extraído: {}
+Cart.js:193 [Cart] Rendering item DETALLES: {itemId: '29b46478-d6b4-42db-8b02-9cd3574f73e7', dishId: undefined, dishName: undefined, imageUrl: '/img/IMG_0366.jpg', originalImageUrl: undefined, …}
+Cart.js:203 === FIN RENDERIZADO ITEM ===
+Cart.js:176 === RENDERIZANDO ITEM ===
+Cart.js:177 Item completo: {
+  "id": "b6726244-59f4-4421-828b-cf338f2fafa5",
+  "cartItemId": "aba1d71e-a0dc-4062-9da5-4dab93521226",
+  "name": "Aji de Gallina",
+  "type": "PLATO_PRINCIPAL",
+  "price": 12.5,
+  "quantity": 1,
+  "image": ""
+}
+Cart.js:181 Dish extraído: {}
+Cart.js:193 [Cart] Rendering item DETALLES: {itemId: 'b6726244-59f4-4421-828b-cf338f2fafa5', dishId: undefined, dishName: undefined, imageUrl: '/img/IMG_0366.jpg', originalImageUrl: undefined, …}
+Cart.js:203 === FIN RENDERIZADO ITEM ===
+Cart.js:212 [Cart] Imagen cargada exitosamente: /img/IMG_0366.jpg
+Cart.js:212 [Cart] Imagen cargada exitosamente: /img/IMG_0366.jpg
+Cart.js:212 [Cart] Imagen cargada exitosamente: /img/IMG_0366.jpg
+Cart.js:212 [Cart] Imagen cargada exitosamente: /img/IMG_0366.jpg

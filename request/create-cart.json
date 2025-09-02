@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "data": {
+        "id": "1ea7418d-f69f-4ff5-8d9d-00dd44fd2e03",
+        "sessionId": "session-123",
+        "userId": "user-123",
+        "status": "ACTIVE",
+        "totalAmount": 0,
+        "createdAt": "2025-09-01T16:05:58.709Z",
+        "updatedAt": "2025-09-01T16:05:58.709Z",
+        "items": []
+    }
+}

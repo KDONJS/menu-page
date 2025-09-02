@@ -1,0 +1,71 @@
+{
+    "success": true,
+    "data": {
+        "cart": {
+            "id": "aff59e95-b6d4-4953-9d40-0d5239917847",
+            "sessionId": "session-123",
+            "userId": "user-123",
+            "status": "ACTIVE",
+            "totalAmount": 37.5,
+            "createdAt": "2025-08-27T03:17:46.866Z",
+            "updatedAt": "2025-08-27T03:19:21.435Z"
+        },
+        "itemCount": 3,
+        "totalAmount": 37.5,
+        "itemsByType": {
+            "entradas": [
+                {
+                    "id": "2fc525ce-7c38-4dce-8854-7a979c433cdc",
+                    "cartId": "aff59e95-b6d4-4953-9d40-0d5239917847",
+                    "dishId": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+                    "quantity": 2,
+                    "price": 12.5,
+                    "itemType": "ENTRADA",
+                    "notes": "Sin cebolla por favor",
+                    "dish": {
+                        "id": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+                        "name": "Ensalada Tailandesa",
+                        "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+                        "price": 12.5,
+                        "type": "ENTRADA",
+                        "status": "ACTIVO",
+                        "imageUrl": "https://imag.bonviveur.com/ensalada-thai.webp",
+                        "preparationTime": 10,
+                        "calories": 280,
+                        "availableFrom": null,
+                        "availableUntil": null,
+                        "createdAt": "2025-08-27T02:30:39.824Z",
+                        "updatedAt": "2025-08-29T01:36:58.676Z"
+                    }
+                }
+            ],
+            "menus": [
+                {
+                    "id": "9db3cbd4-a5ce-456d-b834-d3c0fd79ccac",
+                    "cartId": "aff59e95-b6d4-4953-9d40-0d5239917847",
+                    "dishId": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+                    "quantity": 1,
+                    "price": 12.5,
+                    "itemType": "MENU",
+                    "notes": "Término medio",
+                    "dish": {
+                        "id": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+                        "name": "Ensalada Tailandesa",
+                        "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+                        "price": 12.5,
+                        "type": "ENTRADA",
+                        "status": "ACTIVO",
+                        "imageUrl": "https://imag.bonviveur.com/ensalada-thai.webp",
+                        "preparationTime": 10,
+                        "calories": 280,
+                        "availableFrom": null,
+                        "availableUntil": null,
+                        "createdAt": "2025-08-27T02:30:39.824Z",
+                        "updatedAt": "2025-08-29T01:36:58.676Z"
+                    }
+                }
+            ],
+            "postres": []
+        }
+    }
+}

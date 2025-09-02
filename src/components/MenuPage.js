@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RotateCcw, CheckCircle, ShoppingCart, Utensils } from 'lucide-react';
 import DishCard from './DishCard';
+import UserProfile from './UserProfile';
 import './MenuPage.css';
 import TicketModal from './TicketModal';
 
@@ -30,6 +31,13 @@ const MenuPage = ({
     onResetCart();
   };
 
+  const handleLogout = () => {
+    // Limpiar carrito al cerrar sesión
+    onResetCart();
+    // Recargar la página para volver al login
+    window.location.reload();
+  };
+
   const entradas = dishes.filter(dish => dish.type === 'ENTRADA');
   const platosPrincipales = dishes.filter(dish => dish.type === 'PLATO_PRINCIPAL');
 
@@ -56,7 +64,7 @@ const MenuPage = ({
                 <Utensils size={32} />
               </div>
               <div className="logo-text">
-                <h1 className="menu-title">Menú del Día</h1>
+                <h1 className="menu-title">La Sazón de Lucqa</h1>
               </div>
             </div>
             
@@ -106,6 +114,7 @@ const MenuPage = ({
                     <CheckCircle size={16} />
                     Ordenar
                   </button>
+                  <UserProfile onLogout={handleLogout} />
                 </div>
               ) : cart.length > 0 ? (
                 <div className="action-buttons">
@@ -113,8 +122,13 @@ const MenuPage = ({
                     <RotateCcw size={16} />
                     Limpiar
                   </button>
+                  <UserProfile onLogout={handleLogout} />
                 </div>
-              ) : null}
+              ) : (
+                <div className="action-buttons">
+                  <UserProfile onLogout={handleLogout} />
+                </div>
+              )}
             </div>
           </div>
         </div>

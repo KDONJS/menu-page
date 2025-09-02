@@ -1,0 +1,10 @@
+{
+    "success": true,
+    "message": "Inicio de sesión exitoso",
+    "user": {
+        "id": "82345993-3c13-473d-ab12-9edd55cb8769",
+        "name": "Luis Edin",
+        "phoneNumber": "+51915024829"
+    },
+    "token": "ODIzNDU5OTMtM2MxMy00NzNkLWFiMTItOWVkZDU1Y2I4NzY5OjE3NTY3MDg3MDMzMDg="
+}

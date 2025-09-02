@@ -1,0 +1,110 @@
+{
+    "success": true,
+    "data": {
+        "id": "18a82869-d931-487f-8abf-fb13b3c4ab79",
+        "sessionId": "session-1756743098896-5c9mw2ymu",
+        "userId": "90c80a6f-0122-4e4c-bcae-697dd033673b",
+        "status": "ACTIVE",
+        "totalAmount": "50",
+        "createdAt": "2025-09-02T02:47:50.073Z",
+        "updatedAt": "2025-09-02T02:51:05.522Z",
+        "items": [
+            {
+                "id": "7ac6acb7-4f88-4861-8f30-7364c7b6a293",
+                "cartId": "18a82869-d931-487f-8abf-fb13b3c4ab79",
+                "dishId": "d9c1da26-3fa2-4d04-89d8-2d79a3765e49",
+                "quantity": 1,
+                "price": "12.5",
+                "itemType": "ENTRADA",
+                "notes": "",
+                "dish": {
+                    "id": "d9c1da26-3fa2-4d04-89d8-2d79a3765e49",
+                    "name": "Ensalada Romana",
+                    "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+                    "price": "12.5",
+                    "type": "ENTRADA",
+                    "status": "ACTIVO",
+                    "imageUrl": "https://d1u6ma1fmhichy.cloudfront.net/storage/images/500x293-287-ensalada-provenzal.jpeg",
+                    "preparationTime": 10,
+                    "calories": 280,
+                    "availableFrom": null,
+                    "availableUntil": null,
+                    "createdAt": "2025-08-29T05:13:50.381Z",
+                    "updatedAt": "2025-08-29T05:20:06.885Z"
+                }
+            },
+            {
+                "id": "1534013c-85eb-4a1a-bec3-cd0f981aaacd",
+                "cartId": "18a82869-d931-487f-8abf-fb13b3c4ab79",
+                "dishId": "cbeff500-3f41-45f3-9da2-eaefcdf67a76",
+                "quantity": 1,
+                "price": "12.5",
+                "itemType": "PLATO_PRINCIPAL",
+                "notes": "",
+                "dish": {
+                    "id": "cbeff500-3f41-45f3-9da2-eaefcdf67a76",
+                    "name": "Lomo de Gallina",
+                    "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+                    "price": "12.5",
+                    "type": "PLATO_PRINCIPAL",
+                    "status": "ACTIVO",
+                    "imageUrl": "https://d1u6ma1fmhichy.cloudfront.net/storage/images/500x293-21-adobo-de-cerdo-1672081976.jpeg",
+                    "preparationTime": 10,
+                    "calories": 280,
+                    "availableFrom": null,
+                    "availableUntil": null,
+                    "createdAt": "2025-09-01T04:15:19.144Z",
+                    "updatedAt": "2025-09-01T04:15:19.144Z"
+                }
+            },
+            {
+                "id": "ef96c693-1e93-485a-a738-6f801697c028",
+                "cartId": "18a82869-d931-487f-8abf-fb13b3c4ab79",
+                "dishId": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+                "quantity": 1,
+                "price": "12.5",
+                "itemType": "ENTRADA",
+                "notes": "",
+                "dish": {
+                    "id": "29b46478-d6b4-42db-8b02-9cd3574f73e7",
+                    "name": "Ensalada Tailandesa",
+                    "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+                    "price": "12.5",
+                    "type": "ENTRADA",
+                    "status": "ACTIVO",
+                    "imageUrl": "https://imag.bonviveur.com/ensalada-thai.webp",
+                    "preparationTime": 10,
+                    "calories": 280,
+                    "availableFrom": null,
+                    "availableUntil": null,
+                    "createdAt": "2025-08-27T02:30:39.824Z",
+                    "updatedAt": "2025-08-29T01:36:58.676Z"
+                }
+            },
+            {
+                "id": "aba1d71e-a0dc-4062-9da5-4dab93521226",
+                "cartId": "18a82869-d931-487f-8abf-fb13b3c4ab79",
+                "dishId": "b6726244-59f4-4421-828b-cf338f2fafa5",
+                "quantity": 1,
+                "price": "12.5",
+                "itemType": "PLATO_PRINCIPAL",
+                "notes": "",
+                "dish": {
+                    "id": "b6726244-59f4-4421-828b-cf338f2fafa5",
+                    "name": "Aji de Gallina",
+                    "description": "Ensalada fresca con lechuga romana, crutones y aderezo césar",
+                    "price": "12.5",
+                    "type": "PLATO_PRINCIPAL",
+                    "status": "ACTIVO",
+                    "imageUrl": "https://d1u6ma1fmhichy.cloudfront.net/storage/images/500x293-21-adobo-de-cerdo-1672081976.jpeg",
+                    "preparationTime": 10,
+                    "calories": 280,
+                    "availableFrom": null,
+                    "availableUntil": null,
+                    "createdAt": "2025-08-29T05:16:13.470Z",
+                    "updatedAt": "2025-08-29T05:16:13.470Z"
+                }
+            }
+        ]
+    }
+}
